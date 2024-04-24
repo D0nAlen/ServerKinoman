@@ -2,7 +2,7 @@ const express = require(`express`);
 const cors = require(`cors`);
 const app = express();
 // import { FILMS_CARDS } from "./src/const.js";
-const FILMS_CARDS = require(`./src/const.js`);
+const FILMS_CARDS = require(`./src/filmCards.js`);
 
 
 // const COLOR = {
@@ -784,25 +784,13 @@ const FILMS_CARDS = require(`./src/const.js`);
 //   },
 // ];
 
-const generateFilm = () => {
-  // const dueDate = getRandomDate(); //Math.random() > 0.5 ? null : getRandomDate();
-  return FILMS_CARDS;//{
-  // id: String(new Date().getTime() + Math.random()),
-  // description: getRandomArrayItem(DescriptionItems),
-  // dueDate,
-  // repeatingDays: dueDate ? DefaultRepeatingDays : generateRepeatingDays(),
-  // color: getRandomArrayItem(COLORS),
-  // isArchive: Math.random() > 0.5,
-  // isFavorite: Math.random() > 0.5,
-  //};
-};
+// const generateFilm = () => {
+//   return FILMS_CARDS;
+// };
 
 const generateFilms = () => {
-  const countFilms = FILMS_CARDS;
-  // console.log(countFilms);
-
-  return new Array(countFilms).fill(``).map(generateFilm);
-  // return new Array(count).fill(``).map(FILMS_CARDS);
+  return FILMS_CARDS;
+  //new Array(countFilms).fill(``).map(generateFilm);
 };
 
 const createNewFilm = (newFilm) => {

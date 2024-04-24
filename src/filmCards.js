@@ -27,6 +27,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: true,
     isMarkAsWatched: true,
+    isCardTopRated: true,
+    isCardMostCommented: true,
   },
 
   {
@@ -64,6 +66,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: true,
     isMarkAsFavorite: true,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
 
   {
@@ -100,6 +104,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: true,
     isMarkAsFavorite: false,
     isMarkAsWatched: true,
+    isCardTopRated: true,
+    isCardMostCommented: true,
   },
 
   {
@@ -136,6 +142,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: true,
   },
 
   {
@@ -172,6 +180,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: true,
     isMarkAsWatched: true,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
 
 
@@ -209,6 +219,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: true,
     isMarkAsFavorite: false,
     isMarkAsWatched: true,
+    isCardTopRated: true,
+    isCardMostCommented: true,
   },
   {
     id: String(new Date() + Math.random()),
@@ -244,6 +256,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: true,
+    isCardMostCommented: false,
   },
 
   {
@@ -280,6 +294,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: true,
+    isCardMostCommented: true,
   },
 
   {
@@ -316,6 +332,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: true,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
 
   {
@@ -352,6 +370,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
 
   {
@@ -388,6 +408,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
   {
     id: String(new Date() + Math.random()),
@@ -423,6 +445,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
   {
     id: String(new Date() + Math.random()),
@@ -458,6 +482,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
 
   {
@@ -494,6 +520,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: true,
+    isCardMostCommented: false,
   },
 
   {
@@ -530,6 +558,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
 
   {
@@ -566,6 +596,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
 
   {
@@ -602,6 +634,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
   {
     id: String(new Date() + Math.random()),
@@ -637,6 +671,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
   {
     id: String(new Date() + Math.random()),
@@ -672,6 +708,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
   {
     id: String(new Date() + Math.random()),
@@ -707,6 +745,8 @@ let FILMS_CARDS = [
     isAddToWatchlist: false,
     isMarkAsFavorite: false,
     isMarkAsWatched: false,
+    isCardTopRated: false,
+    isCardMostCommented: false,
   },
 ];
 
