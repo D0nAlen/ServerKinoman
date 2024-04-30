@@ -1,4 +1,3 @@
-// import { formatCommentDate } from "../src/common.js";
 const formatCommentDate = require("./common.js");
 
 const textComment = [
@@ -46,15 +45,17 @@ const getRandomDate = () => {
   return targetDate;
 };
 
+// let ALL_COMMENTS = [];
+
 const generateComment = () => {
   const date = formatCommentDate(getRandomDate());
-
+  const id = new Date().getTime() + Math.random();
   return {
-    id: new Date().getTime() + Math.random(),
-    text: getRandomArrayItem(textComment),
-    emotion: getRandomArrayItem(emotionComment),
-    author: getRandomArrayItem(authorComment),
-    date,
+    "id": id,
+    "text": getRandomArrayItem(textComment),
+    "emotion": getRandomArrayItem(emotionComment),
+    "author": getRandomArrayItem(authorComment),
+    "date": date,
   };
 };
 
