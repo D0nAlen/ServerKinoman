@@ -1,4 +1,6 @@
 const formatCommentDate = require("./common.js");
+// let allComments = require("../index.js");
+let allComments = require("./allComments.js");
 
 const textComment = [
   `Interesting setting and a good cast`,
@@ -45,18 +47,19 @@ const getRandomDate = () => {
   return targetDate;
 };
 
-// let ALL_COMMENTS = [];
-
 const generateComment = () => {
   const date = formatCommentDate(getRandomDate());
   const id = new Date().getTime() + Math.random();
-  return {
+
+  // return 
+  allComments.push({
     "id": id,
     "text": getRandomArrayItem(textComment),
     "emotion": getRandomArrayItem(emotionComment),
     "author": getRandomArrayItem(authorComment),
     "date": date,
-  };
+  });
+  return id;
 };
 
 
@@ -64,6 +67,5 @@ const generateComments = () => {
   const count = Math.floor(Math.random() * 10);
   return new Array(count).fill(``).map(generateComment);
 };
-
 
 module.exports = generateComments;
