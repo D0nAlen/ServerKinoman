@@ -1,15 +1,18 @@
 const express = require(`express`);
 const cors = require(`cors`);
 const app = express();
-const FILMS_CARDS = require(`./src/filmCards.js`);
-// const ALL_COMMENTS = require(`./src/comment.js`);
-let allComments = require("./src/allComments.js");
+const FILMS_CARDS = require(`./src/data/allFilmCards.js`);
+let allComments = require("./src/data/allComments.js");
+const generateComments = require("./src/comment.js");
 
-const generateFilms = () => {
-  return FILMS_CARDS;
-};
+const allFilms = FILMS_CARDS;
 
-const allFilms = generateFilms();
+// генерация комментов на сервере
+const generateAllComments = () => {
+  allFilms.map((filmCard) => {
+    generateComments(filmCard.id);
+  });
+}
 
 // let allComments = [];
 
@@ -26,7 +29,7 @@ const updateFilm = (filmId, changedFilm) => {
   });
 }
 
-const getCommentsFilm = (filmId) => {
+const getCommentsByIdFilm = (filmId) => {
   const getComments = null;
   allFilms.map((obj) => {
     // console.log(obj.id, "_______", filmId);
@@ -40,6 +43,8 @@ const getCommentsFilm = (filmId) => {
   return getComments;
 }
 
+generateAllComments();
+
 app.use(cors());
 app.use(express.json());
 
@@ -49,6 +54,10 @@ app.get(`/movies`, (req, res) => {
 
 app.get(`/comments`, (req, res) => {
   res.send(allComments);
+});
+
+app.get(`/comments/:movieId`, (req, res) => {
+  // res.send(allComments);
   // console.log(req.params.movieId);
 });
 

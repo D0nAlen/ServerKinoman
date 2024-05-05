@@ -1,4 +1,4 @@
-const generateComments = require(`./comment.js`);
+const generateComments = require(`../comment.js`);
 
 let FILMS_CARDS = [
   {
@@ -21,7 +21,7 @@ let FILMS_CARDS = [
       His show features a beautiful assistant, Connie (Mary Beth Hughes) and her drunken husband Al (Dan Duryea), 
       Flamarion's other assistant. Flamarion falls in love with Connie, the movie's femme fatale, and is soon manipulated 
       by her into killing her no good husband during one of their acts.`,
-    comment: generateComments(),
+    comment: [],//generateComments(this.id),
     age: "18+",
     isAddToWatchlist: false,
     isMarkAsFavorite: true,
@@ -60,7 +60,7 @@ let FILMS_CARDS = [
         volutpat.Nunc fermentum tortor ac porta 
         dapibus.In rutrum ac purus sit amet 
         tempus.`,
-    comment: generateComments(),
+    comment: [],//generateComments(this.id),
     age: "18+",
     isAddToWatchlist: true,
     isMarkAsFavorite: true,
@@ -98,7 +98,7 @@ let FILMS_CARDS = [
         volutpat.Nunc fermentum tortor ac porta 
         dapibus.In rutrum ac purus sit amet 
         tempus.`,
-    comment: generateComments(),
+    comment: [], //generateComments(this.id),
     age: "18+",
     isAddToWatchlist: true,
     isMarkAsFavorite: false,

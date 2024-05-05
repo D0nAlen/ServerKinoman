@@ -1,6 +1,6 @@
 const formatCommentDate = require("./common.js");
 // let allComments = require("../index.js");
-let allComments = require("./allComments.js");
+let allComments = require("./data/allComments.js");
 
 const textComment = [
   `Interesting setting and a good cast`,
@@ -51,21 +51,41 @@ const generateComment = () => {
   const date = formatCommentDate(getRandomDate());
   const id = new Date().getTime() + Math.random();
 
-  // return 
-  allComments.push({
+  // allComments.push(
+
+  //   {
+  //     idComment: filmId,
+  return {
     "id": id,
     "text": getRandomArrayItem(textComment),
     "emotion": getRandomArrayItem(emotionComment),
     "author": getRandomArrayItem(authorComment),
     "date": date,
-  });
-  return id;
+  }
+  // },
+  // );
+  // return id;
 };
 
 
-const generateComments = () => {
+// 1) сделать слияние всех объектов с одинаковым id в один, с объединением полей
+const generateComments = (filmId) => {
   const count = Math.floor(Math.random() * 10);
-  return new Array(count).fill(``).map(generateComment);
+  // return new Array(count).fill(``).map(generateComment); //сюда не могу передать idFilm, в generateComment(idFilm)
+
+  let commentsFilm = [];
+  for (let i = 0; i < count; i++) {
+    commentsFilm.push(generateComment());
+  }
+
+  allComments.push(
+    {
+      filmId: filmId,
+      comments: commentsFilm,
+    }
+  );
+  // console.log(filmId);
 };
+
 
 module.exports = generateComments;
