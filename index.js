@@ -14,13 +14,6 @@ const generateAllComments = () => {
   });
 }
 
-// let allComments = [];
-
-// allFilms.map(film => {
-//   const oldResult = allComments;
-//   allComments = oldResult.concat(film.comment);
-// });
-
 const updateFilm = (filmId, changedFilm) => {
   allFilms.map((obj) => {
     if (obj.id === filmId) {
@@ -30,17 +23,14 @@ const updateFilm = (filmId, changedFilm) => {
 }
 
 const getCommentsByIdFilm = (filmId) => {
-  const getComments = null;
-  allFilms.map((obj) => {
-    // console.log(obj.id, "_______", filmId);
-    if (obj.id === filmId) {
-
-      Object.assign(getComments, obj.comment);
-      // Object.assign(obj, changedFilm);
+  allComments.map((comments) => {
+    // console.log(comments.filmId, "____", filmId);
+    // console.log(comments.comments);
+    if (comments.filmId === filmId) {
+      return comments.comments;
     }
   });
-  // console.log(getComments);
-  return getComments;
+  return [];
 }
 
 generateAllComments();
@@ -56,10 +46,19 @@ app.get(`/comments`, (req, res) => {
   res.send(allComments);
 });
 
+
+
+
+
 app.get(`/comments/:movieId`, (req, res) => {
-  // res.send(allComments);
-  // console.log(req.params.movieId);
+  console.log(req.params.movieId);
+  const comments = getCommentsByIdFilm(req.params.movieId)
+  res.send(comments);
 });
+
+
+
+
 
 // updateFilm
 app.put('/movies/:movieId', function (req, res) {

@@ -68,15 +68,16 @@ const generateComment = () => {
 };
 
 
-// 1) сделать слияние всех объектов с одинаковым id в один, с объединением полей
 const generateComments = (filmId) => {
   const count = Math.floor(Math.random() * 10);
   // return new Array(count).fill(``).map(generateComment); //сюда не могу передать idFilm, в generateComment(idFilm)
 
-  let commentsFilm = [];
-  for (let i = 0; i < count; i++) {
-    commentsFilm.push(generateComment());
-  }
+  // let commentsFilm = [];
+  // for (let i = 0; i < count; i++) {
+  //   commentsFilm.push(generateComment());
+  // }
+
+  const commentsFilm = new Array(count).fill(``).map(generateComment);
 
   allComments.push(
     {
@@ -84,7 +85,6 @@ const generateComments = (filmId) => {
       comments: commentsFilm,
     }
   );
-  // console.log(filmId);
 };
 
 
