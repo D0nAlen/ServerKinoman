@@ -23,14 +23,16 @@ const updateFilm = (filmId, changedFilm) => {
 }
 
 const getCommentsByIdFilm = (filmId) => {
+  let result = [];
+
   allComments.map((comments) => {
-    // console.log(comments.filmId, "____", filmId);
-    // console.log(comments.comments);
     if (comments.filmId === filmId) {
-      return comments.comments;
+      // console.log(comments.filmId, "____", filmId);
+      // console.log(comments.comments);
+      result = comments.comments;
     }
   });
-  return [];
+  return result;
 }
 
 generateAllComments();
@@ -49,10 +51,8 @@ app.get(`/comments`, (req, res) => {
 
 
 
-
 app.get(`/comments/:movieId`, (req, res) => {
-  console.log(req.params.movieId);
-  const comments = getCommentsByIdFilm(req.params.movieId)
+  const comments = getCommentsByIdFilm(req.params.movieId);
   res.send(comments);
 });
 

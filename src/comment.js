@@ -1,5 +1,5 @@
 const formatCommentDate = require("./common.js");
-// let allComments = require("../index.js");
+let FILMS_CARDS = require("./data/allFilmCards.js");
 let allComments = require("./data/allComments.js");
 
 const textComment = [
@@ -47,45 +47,70 @@ const getRandomDate = () => {
   return targetDate;
 };
 
+// const generateComment = () => {
+//   const date = formatCommentDate(getRandomDate());
+//   const id = new Date().getTime() + Math.random();
+// // console.log(id);
+//   // allComments.push(
+
+//   //   {
+//   //     idComment: filmId,
+//   return {
+//     "id": id,
+//     "text": getRandomArrayItem(textComment),
+//     "emotion": getRandomArrayItem(emotionComment),
+//     "author": getRandomArrayItem(authorComment),
+//     "date": date,
+//   }
+//   // },
+//   // );
+//   // return id;
+// };
+
+
+// const generateComments = (filmId) => {
+//   const count = Math.floor(Math.random() * 10);
+//   // return new Array(count).fill(``).map(generateComment); //сюда не могу передать idFilm, в generateComment(idFilm)
+
+//   // let commentsFilm = [];
+//   // for (let i = 0; i < count; i++) {
+//   //   commentsFilm.push(generateComment());
+//   // }
+
+//   const commentsFilm = new Array(count).fill(``).map(generateComment);
+// //   FILMS_CARDS.map((film)=>{
+// // // console.log(film);
+// //   });
+
+//   allComments.push(
+//     {
+//       filmId: filmId,
+//       comments: commentsFilm,
+//     }
+//   );
+// };
+
+
+
+
 const generateComment = () => {
   const date = formatCommentDate(getRandomDate());
   const id = new Date().getTime() + Math.random();
-
-  // allComments.push(
-
-  //   {
-  //     idComment: filmId,
   return {
     "id": id,
     "text": getRandomArrayItem(textComment),
     "emotion": getRandomArrayItem(emotionComment),
     "author": getRandomArrayItem(authorComment),
     "date": date,
-  }
-  // },
-  // );
-  // return id;
+  };
 };
 
 
-const generateComments = (filmId) => {
+const generateComments = () => {
   const count = Math.floor(Math.random() * 10);
-  // return new Array(count).fill(``).map(generateComment); //сюда не могу передать idFilm, в generateComment(idFilm)
-
-  // let commentsFilm = [];
-  // for (let i = 0; i < count; i++) {
-  //   commentsFilm.push(generateComment());
-  // }
-
-  const commentsFilm = new Array(count).fill(``).map(generateComment);
-
-  allComments.push(
-    {
-      filmId: filmId,
-      comments: commentsFilm,
-    }
-  );
+  return new Array(count).fill(``).map(generateComment);
 };
+
 
 
 module.exports = generateComments;
